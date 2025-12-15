@@ -102,10 +102,24 @@ export const tarifs: Tarif[] = [
     ]
   },
   {
-    id: "camping-car",
-    title: "Camping-car",
+    id: "contre-visite-externe",
+    title: "Contre-Visite Externe",
+    price: 30,
+    description: "Vérification après réparations",
+    icon: ClipboardCheck,
+    color: "blue",
+    features: [
+      "Délai de 2 mois",
+      "Vérification ciblée",
+      "Tarif préférentiel",
+      "Sans rendez-vous"
+    ]
+  },
+  {
+    id: "hors-gabarit",
+    title: "Véhicule hors gabarit",
     price: 110,
-    description: "Véhicules hors gabarit",
+    description: "Véhicules hors gabarit, Camping Car",
     icon: Home,
     color: "purple",
     features: [

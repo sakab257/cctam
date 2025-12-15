@@ -9,12 +9,12 @@ export const TarifsTable = () => {
           <h3 className="text-xl font-bold text-white">Grille Tarifaire Complète</h3>
           <p className="text-sm text-blue-100 mt-1">Tous nos tarifs TTC</p>
         </div>
-        <Table>
+        <Table className=''>
           <TableHeader>
             <TableRow>
               <TableHead className="font-semibold text-gray-900">Type de Contrôle</TableHead>
-              <TableHead className="font-semibold text-gray-900">Description</TableHead>
               <TableHead className="text-right font-semibold text-gray-900">Prix TTC</TableHead>
+              {/* <TableHead className="font-semibold text-gray-900">Description</TableHead> */}
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -30,7 +30,7 @@ export const TarifsTable = () => {
                       <span className="text-gray-900">{tarif.title}</span>
                     </div>
                   </TableCell>
-                  <TableCell className="text-gray-600 text-sm">{tarif.description}</TableCell>
+                  
                   <TableCell className="text-right">
                     <div className="flex flex-col items-end gap-1">
                       <div className="flex items-baseline justify-end gap-2">
@@ -40,12 +40,13 @@ export const TarifsTable = () => {
                         )}
                       </div>
                       {tarif.badge && (
-                        <span className="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full font-medium">
+                        <span className="text-[8px] md:text-sm bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full font-medium">
                           {tarif.badge}
                         </span>
                       )}
                     </div>
                   </TableCell>
+                  {/* <TableCell className="text-gray-600 text-sm">{tarif.description}</TableCell> */}
                 </TableRow>
               )
             })}
