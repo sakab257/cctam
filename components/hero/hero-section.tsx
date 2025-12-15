@@ -9,8 +9,9 @@ import { HeroFeatures } from './hero-features'
 const HeroSection = () => {
     return (
         <section
-        className="relative w-full min-h-full bg-linear-to-br from-blue-50 via-white to-blue-50 py-8 md:py-16 flex items-center"
+        className="relative w-full h-[calc(100vh-5rem)] bg-linear-to-br from-blue-50 via-white to-blue-50 py-8 md:py-16 flex items-center overflow-hidden md:snap-start scroll-mt-20"
         aria-labelledby="hero-title"
+        id="hero-section"
         >
         <div className="container mx-auto px-4 relative z-10">
             <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">
@@ -26,7 +27,7 @@ const HeroSection = () => {
             </div>
 
             {/* Description pour le SEO */}
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl px-4 text-shadow-2xs">
+            <p className="max-w-lg w-full text-base md:text-lg text-gray-600 text-shadow-2xs p-4">
                 Prenez rendez-vous en ligne 24h/24 pour votre contrôle technique automobile, moto ou voiture sans permis
                 dans nos centres CCTAM du Blanc-Mesnil et d'Ivry-Sur-Seine.
             </p>
@@ -42,13 +43,13 @@ const HeroSection = () => {
         </div>
 
         {/* Image ours en fond à gauche */}
-        <div className="hidden lg:block absolute opacity-10 lg:opacity-100 left-0 lg:left-8 top-1/2 -translate-y-1/2 w-xs md:w-md lg:w-lg z-0 transition-all" aria-hidden="true">
+        <div className="hidden lg:block absolute lg:opacity-100 left-0 bottom-0 w-100 z-0 transition-all" aria-hidden="true">
             <Image
-                src="/ours.png"
-                alt=""
-                width={800}
-                height={800}
-                className="object-contain w-full transition-all"
+                src="/ours3.webp"
+                alt="Image de la mascotte d'Autosur"
+                width={400}
+                height={400}
+                className="object-contain w-full h-auto transition-all"
                 priority
             />
         </div>

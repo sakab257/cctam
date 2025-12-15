@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="h-full">
+    <html lang="fr" className="h-full scroll-smooth md:snap-y md:snap-proximity">
       <body
-        className={`${poppins.className} antialiased h-full`}
+        className={`${poppins.className} antialiased h-full overflow-y-auto`}
       >
         {children}
       </body>

@@ -1,0 +1,151 @@
+import { Car, Truck, Zap, Fuel, ClipboardCheck, Home } from "lucide-react"
+
+export interface Tarif {
+  id: string
+  title: string
+  price: number
+  originalPrice?: number
+  description: string
+  icon: any
+  features: string[]
+  popular?: boolean
+  badge?: string
+  color: "blue" | "red" | "purple" | "green" | "orange"
+}
+
+export const tarifs: Tarif[] = [
+  {
+    id: "particulier",
+    title: "Véhicule Particulier",
+    price: 75,
+    originalPrice: 79,
+    description: "Essence/Diesel",
+    icon: Car,
+    color: "blue",
+    popular: true,
+    badge: "Promo Web",
+    features: [
+      "Contrôle de 133 points",
+      "Résultats immédiats",
+      "Promotion réservation en ligne",
+      "Valable sur créneaux web"
+    ]
+  },
+  {
+    id: "utilitaire",
+    title: "Véhicule Utilitaire Léger",
+    price: 90,
+    description: "Camionnette et VUL",
+    icon: Truck,
+    color: "purple",
+    features: [
+      "Contrôle adapté VUL",
+      "Expertise professionnelle",
+      "Prise en charge rapide",
+      "Équipement spécialisé"
+    ]
+  },
+  {
+    id: "4x4",
+    title: "4x4 et Grand Utilitaire",
+    price: 95,
+    description: "Véhicules tout-terrain",
+    icon: Truck,
+    color: "orange",
+    features: [
+      "Contrôle renforcé",
+      "Équipement adapté",
+      "Contrôleurs expérimentés",
+      "Résultats détaillés"
+    ]
+  },
+  {
+    id: "hybride",
+    title: "Véhicule Hybride",
+    price: 90,
+    description: "Véhicules électriques et hybrides",
+    icon: Zap,
+    color: "blue",
+    features: [
+      "Contrôle spécifique hybride",
+      "Expertise électrique",
+      "Sécurité batteries",
+      "Personnel formé"
+    ]
+  },
+  {
+    id: "gaz",
+    title: "Véhicule GAZ-GPL",
+    price: 110,
+    description: "Contrôle spécifique GPL/GNV",
+    icon: Fuel,
+    color: "red",
+    features: [
+      "Contrôle système GAZ",
+      "Vérification étanchéité",
+      "Expertise certifiée",
+      "Sécurité renforcée"
+    ]
+  },
+  {
+    id: "contre-visite",
+    title: "Contre-Visite",
+    price: 30,
+    description: "Vérification après réparations",
+    icon: ClipboardCheck,
+    color: "blue",
+    features: [
+      "Délai de 2 mois",
+      "Vérification ciblée",
+      "Tarif préférentiel",
+      "Sans rendez-vous"
+    ]
+  },
+  {
+    id: "camping-car",
+    title: "Camping-car",
+    price: 110,
+    description: "Véhicules hors gabarit",
+    icon: Home,
+    color: "purple",
+    features: [
+      "Contrôle hors gabarit",
+      "Équipement adapté",
+      "Prise en charge spéciale",
+      "Expertise camping-car"
+    ]
+  },
+  {
+    id: "pollution",
+    title: "Complémentaire Pollution",
+    price: 40,
+    description: "Contrôle pollution additionnel",
+    icon: Fuel,
+    color: "green",
+    features: [
+      "Mesure des émissions",
+      "Analyse gaz échappement",
+      "Conformité normes",
+      "Rapport détaillé"
+    ]
+  }
+]
+
+export interface Schedule {
+  days: string
+  hours: string
+}
+
+export const schedules: Schedule[] = [
+  {
+    days: "Lundi au Samedi",
+    hours: "9h - 18h"
+  }
+]
+
+export const centerInfo = {
+  address: "17 rue Corneille, 93150 Le Blanc-Mesnil",
+  phone: "01 48 67 66 66",
+  access: "À 2 minutes de la gare RER",
+  promoNote: "Remise de 4 € pour véhicule particulier - Valable uniquement sur créneaux spécifiques internet"
+}

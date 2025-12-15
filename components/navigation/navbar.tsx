@@ -48,6 +48,7 @@ export const Other = () => {
             </PopoverTrigger>
             <PopoverContent>
                 <nav aria-label="Liens secondaires">
+                    <h3 className="text-sm font-semibold text-gray-500 mb-4">Autres liens</h3>
                     <ul className="flex flex-col gap-y-4">
                         {otherLinks.map((link) => (
                             <li key={link.title}>

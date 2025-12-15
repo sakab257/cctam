@@ -9,7 +9,7 @@ export const Header = () => {
                 <NavLogo />
                 <div className="hidden lg:flex gap-2 items-center">
                     <Navbar />
-                    <Button className="font-bold">Prendre Rendez-Vous</Button>
+                    <Button className="font-bold hover:scale-105 transition-all">Prendre Rendez-Vous</Button>
                     <Other />
                 </div>
                 <MobileNav />

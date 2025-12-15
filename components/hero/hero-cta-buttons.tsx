@@ -17,7 +17,7 @@ const locations: Location[] = [
   {
     name: 'Ivry-Sur-Seine',
     slug: '/ivry-sur-seine',
-    description: 'Prendre rendez-vous au centre de contrôle technique CCTAM d\'Ivry-Sur-Seine'
+    description: "Prendre rendez-vous au centre de contrôle technique CCTAM d'Ivry-Sur-Seine"
   }
 ]
 
@@ -27,7 +27,7 @@ export const HeroCTAButtons = () => {
       <Button
         asChild
         size="lg"
-        className="text-sm md:text-base font-semibold px-6 py-5 shadow-lg hover:shadow-xl transition-shadow"
+        className="text-sm md:text-base font-semibold px-6 py-5 shadow-lg hover:shadow-xl hover:scale-105 transition-all"
       >
         <Link
           href={locations[0].slug}
@@ -42,7 +42,7 @@ export const HeroCTAButtons = () => {
         asChild
         size="lg"
         variant="outline"
-        className="text-sm md:text-base font-semibold px-6 py-5 border-2 hover:bg-gray-50"
+        className="text-sm md:text-base font-semibold px-6 py-5 border-2 hover:bg-gray-50 hover:scale-105 transition-all"
       >
         <Link
           href={locations[1].slug}
