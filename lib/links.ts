@@ -2,7 +2,7 @@ export const links = [
     {
         title: "Services",
         href: "#services",
-        description: "Rejoignez l'équipe CCTAM - Consultez nos offres d'emploi"
+        description: "Rejoignez l'équipe CTAM - Consultez nos offres d'emploi"
     },
     {
         title: "Tarifs & Horaires",
@@ -20,7 +20,7 @@ export const otherLinks = [
     {
         title: "Qui sommes-nous ?",
         href: "",
-        description: "Découvrez le centre de contrôle technique CCTAM Le Blanc-Mesnil"
+        description: "Découvrez le centre de contrôle technique CTAM Le Blanc-Mesnil"
     },
     {
         title: "éviter la contre visite",
@@ -35,11 +35,11 @@ export const otherLinks = [
     {
         title: "Actualités",
         href: "",
-        description: "Suivez l'actualité du contrôle technique et de CCTAM"
+        description: "Suivez l'actualité du contrôle technique et de CTAM"
     },
     {
         title: "Recrutement",
         href: "",
-        description: "Suivez l'actualité du contrôle technique et de CCTAM"
+        description: "Suivez l'actualité du contrôle technique et de CTAM"
     },
 ]

@@ -1,6 +1,7 @@
 import { avisClients } from '@/lib/avis-data'
 import { AvisHeader } from './avis-header'
 import { AvisCard } from './avis-card'
+import Link from 'next/link'
 
 const Avis = () => {
   return (
@@ -25,14 +26,14 @@ const Avis = () => {
           <p className="text-gray-600 mb-4">
             Vous aussi, partagez votre expérience
           </p>
-          <a
+          <Link
             href="https://www.google.com/search?q=cctam+le+blanc+mesnil"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
           >
             Laisser un Avis Google
-          </a>
+          </Link>
         </div>
       </div>
 

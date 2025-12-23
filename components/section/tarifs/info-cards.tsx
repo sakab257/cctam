@@ -1,5 +1,6 @@
 import { Clock, MapPin, Phone } from 'lucide-react'
 import { schedules, centerInfo } from '@/lib/tarifs-data'
+import Link from 'next/link'
 
 export const InfoCards = () => {
   return (
@@ -43,12 +44,12 @@ export const InfoCards = () => {
           </div>
           <h3 className="text-lg font-semibold text-gray-900">Contact</h3>
         </div>
-        <a
+        <Link
           href={`tel:${centerInfo.phone.replace(/\s/g, '')}`}
           className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors block mb-2"
         >
           {centerInfo.phone}
-        </a>
+        </Link>
         <div className="text-xs text-gray-500 flex items-center gap-2">
           <div className="h-1 w-1 rounded-full bg-blue-600" />
           Du lundi au samedi

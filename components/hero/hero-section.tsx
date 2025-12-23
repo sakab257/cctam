@@ -5,6 +5,7 @@ import { GoogleRating } from './google-rating'
 import { HeroTitle } from './hero-title'
 import { HeroCTAButtons } from './hero-cta-buttons'
 import { HeroFeatures } from './hero-features'
+import { HeroCards } from './hero-cards'
 
 const HeroSection = () => {
     return (
@@ -29,7 +30,7 @@ const HeroSection = () => {
             {/* Description pour le SEO */}
             <p className="max-w-lg w-full text-base md:text-lg text-gray-600 text-shadow-2xs p-4">
                 Prenez rendez-vous en ligne 24h/24 pour votre contrôle technique automobile, moto ou voiture sans permis
-                dans nos centres CCTAM du Blanc-Mesnil et d'Ivry-Sur-Seine.
+                dans nos centres CTAM du Blanc-Mesnil et d'Ivry-Sur-Seine.
             </p>
 
             {/* Boutons CTA */}
@@ -70,6 +71,10 @@ const HeroSection = () => {
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-30" aria-hidden="true">
             <div className="absolute top-20 right-20 w-72 h-72 bg-blue-200 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-200 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className='hidden lg:flex absolute w-60 bottom-8 right-8 flex-col gap-4'>
+            <HeroCards />
         </div>
         </section>
     )

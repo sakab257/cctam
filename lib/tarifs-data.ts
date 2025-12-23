@@ -104,7 +104,7 @@ export const tarifs: Tarif[] = [
   {
     id: "contre-visite-externe",
     title: "Contre-Visite Externe",
-    price: 30,
+    price: 40,
     description: "Vérification après réparations",
     icon: ClipboardCheck,
     color: "blue",

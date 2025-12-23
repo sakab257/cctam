@@ -1,6 +1,7 @@
 import React from 'react'
 import { services } from '@/lib/services-data'
 import { ServiceCard } from './service-card'
+import Link from 'next/link'
 
 export const Services = () => {
   return (
@@ -42,12 +43,12 @@ export const Services = () => {
           <p className="text-gray-600 mb-4">
             Prêt à prendre rendez-vous pour votre contrôle technique ?
           </p>
-          <a
+          <Link
             href="#hero-section"
             className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
           >
             Prendre Rendez-Vous Maintenant
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -12,12 +12,12 @@ const locations: Location[] = [
   {
     name: 'Le Blanc-Mesnil',
     slug: '/le-blanc-mesnil',
-    description: 'Prendre rendez-vous au centre de contrôle technique CCTAM du Blanc-Mesnil'
+    description: 'Prendre rendez-vous au centre de contrôle technique CTAM du Blanc-Mesnil'
   },
   {
     name: 'Ivry-Sur-Seine',
     slug: '/ivry-sur-seine',
-    description: "Prendre rendez-vous au centre de contrôle technique CCTAM d'Ivry-Sur-Seine"
+    description: "Prendre rendez-vous au centre de contrôle technique CTAM d'Ivry-Sur-Seine"
   }
 ]
 

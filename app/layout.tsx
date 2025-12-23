@@ -3,8 +3,8 @@ import "./globals.css";
 import { poppins } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "CCTAM - Contrôle Technique Auto Moto",
-  description: "Prenez rendez-vous en ligne 24h/24, d'un simple clic dans le centre de contrôle technique automobile, moto, voiture sans permis CCTAM Le Blanc-Mesnil.",
+  title: "CTAM - Contrôle Technique Auto Moto",
+  description: "Prenez rendez-vous en ligne 24h/24, d'un simple clic dans le centre de contrôle technique automobile, moto, voiture sans permis CTAM Le Blanc-Mesnil.",
 };
 
 export default function RootLayout({

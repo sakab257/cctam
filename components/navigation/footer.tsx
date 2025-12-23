@@ -22,7 +22,7 @@ export const FooterMobile = () => {
                     >
                         <Link
                             href={`tel:${phoneNumber}`}
-                            aria-label="Appeler le centre CCTAM"
+                            aria-label="Appeler le centre CTAM"
                         >
                             <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
                             Appeler
@@ -34,7 +34,7 @@ export const FooterMobile = () => {
                         className="flex-1 font-semibold shadow-md"
                     >
                         <Link
-                            href="/rendez-vous"
+                            href="#hero-section"
                             aria-label="Prendre rendez-vous en ligne pour un contrôle technique"
                         >
                             <Calendar className="h-5 w-5 mr-2" aria-hidden="true" />
@@ -65,27 +65,27 @@ export const Footer = () => {
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
-              <a
+              <Link
                 href="#"
                 className="p-2 bg-gray-800 rounded-lg hover:bg-primary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="p-2 bg-gray-800 rounded-lg hover:bg-primary transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="p-2 bg-gray-800 rounded-lg hover:bg-primary transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -108,9 +108,9 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <a href="mailto:contact@cctam.fr" className="text-sm hover:text-primary transition-colors">
-                  contact@cctam.fr
-                </a>
+                <Link href="mailto:contact@ctam.fr" className="text-sm hover:text-primary transition-colors">
+                  contact@ctam.fr
+                </Link>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -175,7 +175,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-400">
-              © {currentYear} CCTAM. Tous droits réservés.
+              © {currentYear} CTAM. Tous droits réservés.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <span>Agréé par l'État</span>
@@ -185,6 +185,8 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+      {/* Spacer pour le FooterMobile fixe sur mobile */}
+      <div className="h-20 lg:hidden" aria-hidden="true" />
     </footer>
   )
 }
