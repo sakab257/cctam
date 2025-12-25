@@ -1,11 +1,18 @@
+"use client"
+
 import { Button } from "../ui/button"
-import { Phone, Calendar, MapPin, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react"
+import { Phone, Calendar, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
-import { NavLogo } from "./logo"
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "../ui/dialog"
+import { lbmInfo, ivryInfo } from "@/lib/tarifs-data"
 
 export const FooterMobile = () => {
-    const phoneNumber = "0148672001"
-
     return (
         <footer
             className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 shadow-lg lg:hidden"
@@ -14,20 +21,58 @@ export const FooterMobile = () => {
         >
             <div className="container mx-auto px-4 py-3">
                 <div className="flex gap-3">
-                    <Button
-                        asChild
-                        variant="outline"
-                        size="lg"
-                        className="flex-1 font-semibold border-2"
-                    >
-                        <Link
-                            href={`tel:${phoneNumber}`}
-                            aria-label="Appeler le centre CTAM"
-                        >
-                            <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-                            Appeler
-                        </Link>
-                    </Button>
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                className="flex-1 font-semibold border-2"
+                                aria-label="Choisir un centre à appeler"
+                            >
+                                <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
+                                Appeler
+                            </Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-md">
+                            <DialogHeader>
+                                <DialogTitle className="text-center text-xl">
+                                    Choisissez un centre
+                                </DialogTitle>
+                            </DialogHeader>
+                            <div className="flex flex-col gap-3 mt-4">
+                                <Link
+                                    href={`tel:${lbmInfo.phone.replace(/\s/g, '')}`}
+                                    className="flex items-center gap-4 p-4 rounded-xl border-2 border-gray-100 hover:border-primary hover:bg-blue-50 transition-all group"
+                                >
+                                    <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <MapPin className="h-5 w-5 text-primary group-hover:text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="font-semibold text-gray-900">Le Blanc-Mesnil</p>
+                                        <p className="text-sm text-gray-500">{lbmInfo.address}</p>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="font-bold text-primary">{lbmInfo.phone}</p>
+                                    </div>
+                                </Link>
+                                <Link
+                                    href={`tel:${ivryInfo.phone.replace(/\s/g, '')}`}
+                                    className="flex items-center gap-4 p-4 rounded-xl border-2 border-gray-100 hover:border-primary hover:bg-blue-50 transition-all group"
+                                >
+                                    <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <MapPin className="h-5 w-5 text-primary group-hover:text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="font-semibold text-gray-900">Ivry-sur-Seine</p>
+                                        <p className="text-sm text-gray-500">{ivryInfo.address}</p>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="font-bold text-primary">{ivryInfo.phone}</p>
+                                    </div>
+                                </Link>
+                            </div>
+                        </DialogContent>
+                    </Dialog>
                     <Button
                         asChild
                         size="lg"
@@ -54,12 +99,12 @@ export const Footer = () => {
     <footer className="bg-gray-900 text-gray-300">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Column 1: Logo & Description */}
           <div className="space-y-4">
-            <div className="p-3 rounded-lg inline-block">
-              <NavLogo />
-            </div>
+            <Link href="/" className="text-2xl font-bold text-white hover:text-primary transition-colors">
+              CTAM
+            </Link>
             <p className="text-sm leading-relaxed text-gray-400">
               Centre de contrôle technique automobile, moto et voiture sans permis à Le Blanc-Mesnil et Ivry-Sur-Seine.
             </p>
@@ -89,34 +134,44 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Contact Info */}
+          {/* Column 2: Contact Le Blanc-Mesnil */}
           <div className="space-y-4">
-            <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">Le Blanc-Mesnil</h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <div className="text-sm">
-                  <p className="font-medium text-white">Le Blanc-Mesnil</p>
-                  <p className="text-gray-400">17 rue Corneille, 93150</p>
-                </div>
+                <p className="text-sm text-gray-400">{lbmInfo.address}</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <a href="tel:0148676666" className="text-sm hover:text-primary transition-colors">
-                  01 48 67 66 66
+                <a href={`tel:${lbmInfo.phone.replace(/\s/g, '')}`} className="text-sm hover:text-primary transition-colors">
+                  {lbmInfo.phone}
                 </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary shrink-0" />
-                <Link href="mailto:contact@ctam.fr" className="text-sm hover:text-primary transition-colors">
-                  contact@ctam.fr
-                </Link>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <div className="text-sm">
-                  <p className="text-gray-400">Lun - Sam : 9h - 18h</p>
-                </div>
+                <p className="text-sm text-gray-400">Lun - Sam : 9h - 18h</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3: Contact Ivry-sur-Seine */}
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold text-lg mb-4">Ivry-sur-Seine</h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <p className="text-sm text-gray-400">{ivryInfo.address}</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-primary shrink-0" />
+                <a href={`tel:${ivryInfo.phone.replace(/\s/g, '')}`} className="text-sm hover:text-primary transition-colors">
+                  {ivryInfo.phone}
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <p className="text-sm text-gray-400">Lun - Sam : 9h - 18h</p>
               </div>
             </div>
           </div>

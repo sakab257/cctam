@@ -13,7 +13,8 @@ export interface Tarif {
   color: "blue" | "red" | "purple" | "green" | "orange"
 }
 
-export const tarifs: Tarif[] = [
+// Tarifs Le Blanc-Mesnil
+export const tarifsLBM: Tarif[] = [
   {
     id: "particulier",
     title: "Véhicule Particulier",
@@ -145,6 +146,142 @@ export const tarifs: Tarif[] = [
   }
 ]
 
+// Tarifs Ivry-sur-Seine
+export const tarifsIvry: Tarif[] = [
+  {
+    id: "particulier",
+    title: "Véhicule Particulier",
+    price: 80,
+    originalPrice: 85,
+    description: "Essence/Diesel",
+    icon: Car,
+    color: "blue",
+    popular: true,
+    badge: "Promo Web",
+    features: [
+      "Contrôle de 133 points",
+      "Résultats immédiats",
+      "Promotion réservation en ligne",
+      "Valable sur créneaux web"
+    ]
+  },
+  {
+    id: "utilitaire",
+    title: "Véhicule Utilitaire Léger",
+    price: 95,
+    description: "Camionnette et VUL",
+    icon: Truck,
+    color: "purple",
+    features: [
+      "Contrôle adapté VUL",
+      "Expertise professionnelle",
+      "Prise en charge rapide",
+      "Équipement spécialisé"
+    ]
+  },
+  {
+    id: "4x4",
+    title: "4x4 et Grand Utilitaire",
+    price: 100,
+    description: "Véhicules tout-terrain",
+    icon: Truck,
+    color: "orange",
+    features: [
+      "Contrôle renforcé",
+      "Équipement adapté",
+      "Contrôleurs expérimentés",
+      "Résultats détaillés"
+    ]
+  },
+  {
+    id: "hybride",
+    title: "Véhicule Hybride",
+    price: 95,
+    description: "Véhicules électriques et hybrides",
+    icon: Zap,
+    color: "blue",
+    features: [
+      "Contrôle spécifique hybride",
+      "Expertise électrique",
+      "Sécurité batteries",
+      "Personnel formé"
+    ]
+  },
+  {
+    id: "gaz",
+    title: "Véhicule GAZ-GPL",
+    price: 115,
+    description: "Contrôle spécifique GPL/GNV",
+    icon: Fuel,
+    color: "red",
+    features: [
+      "Contrôle système GAZ",
+      "Vérification étanchéité",
+      "Expertise certifiée",
+      "Sécurité renforcée"
+    ]
+  },
+  {
+    id: "contre-visite",
+    title: "Contre-Visite",
+    price: 30,
+    description: "Vérification après réparations",
+    icon: ClipboardCheck,
+    color: "blue",
+    features: [
+      "Délai de 2 mois",
+      "Vérification ciblée",
+      "Tarif préférentiel",
+      "Sans rendez-vous"
+    ]
+  },
+  {
+    id: "contre-visite-externe",
+    title: "Contre-Visite Externe",
+    price: 40,
+    description: "Vérification après réparations",
+    icon: ClipboardCheck,
+    color: "blue",
+    features: [
+      "Délai de 2 mois",
+      "Vérification ciblée",
+      "Tarif préférentiel",
+      "Sans rendez-vous"
+    ]
+  },
+  {
+    id: "hors-gabarit",
+    title: "Véhicule hors gabarit",
+    price: 115,
+    description: "Véhicules hors gabarit, Camping Car",
+    icon: Home,
+    color: "purple",
+    features: [
+      "Contrôle hors gabarit",
+      "Équipement adapté",
+      "Prise en charge spéciale",
+      "Expertise camping-car"
+    ]
+  },
+  {
+    id: "pollution",
+    title: "Complémentaire Pollution",
+    price: 45,
+    description: "Contrôle pollution additionnel",
+    icon: Fuel,
+    color: "green",
+    features: [
+      "Mesure des émissions",
+      "Analyse gaz échappement",
+      "Conformité normes",
+      "Rapport détaillé"
+    ]
+  }
+]
+
+// Export par défaut pour compatibilité
+export const tarifs = tarifsLBM
+
 export interface Schedule {
   days: string
   hours: string
@@ -157,9 +294,17 @@ export const schedules: Schedule[] = [
   }
 ]
 
-export const centerInfo = {
+export const lbmInfo = {
   address: "17 rue Corneille, 93150 Le Blanc-Mesnil",
   phone: "01 48 67 66 66",
   access: "À 2 minutes de la gare RER",
   promoNote: "Remise de 4 € pour véhicule particulier - Valable uniquement sur créneaux spécifiques internet"
+}
+
+
+export const ivryInfo = {
+  address: "3-5 bd Hippolyte Marquès, 94200 Ivry-sur-Seine",
+  phone: "01 46 71 11 22",
+  access: "À quelques pas du péripherique.",
+  promoNote: "Remise de 5 € pour véhicule particulier - Valable uniquement sur créneaux spécifiques internet"
 }

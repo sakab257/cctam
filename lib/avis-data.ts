@@ -8,7 +8,21 @@ export interface Avis {
   verified: boolean
 }
 
-export const avisClients: Avis[] = [
+export interface StatsAvis {
+  totalAvis: number
+  noteMoyenne: number
+  repartition: {
+    5: number
+    4: number
+    3: number
+    2: number
+    1: number
+  }
+  googleUrl: string
+}
+
+// Avis Le Blanc-Mesnil
+export const avisLBM: Avis[] = [
   {
     id: "1",
     name: "Sophie M.",
@@ -38,7 +52,7 @@ export const avisClients: Avis[] = [
   },
 ]
 
-export const statsAvis = {
+export const statsLBM: StatsAvis = {
   totalAvis: 351,
   noteMoyenne: 4.8,
   repartition: {
@@ -46,6 +60,55 @@ export const statsAvis = {
     4: 53,
     3: 6,
     2: 4,
-    1: 10
-  }
+    1: 3
+  },
+  googleUrl: "https://www.google.com/search?q=cctam+le+blanc+mesnil"
 }
+
+// Avis Ivry-sur-Seine
+export const avisIvry: Avis[] = [
+  {
+    id: "1",
+    name: "Nathalie Tea",
+    rating: 5,
+    date: "Il y a 3 mois",
+    comment: "Accueil pro, monsieur au guichet très sympathique et très gentil, patient et a pu répondre à toutes mes questions et donner des conseils supplémentaires sur une partie de la voiture ! Dame très gentille également au top 👌",
+    vehicle: "Volkswagen Golf",
+    verified: true
+  },
+  {
+    id: "2",
+    name: "Alexandre Razee",
+    rating: 5,
+    date: "Il y a 4 mois",
+    comment: "Contrôle technique effectué récemment dans ce centre. L’accueil a été agréable et on a pris le temps de m’expliquer les points relevés sans dramatiser, avec clarté et honnêteté. Tout s’est déroulé dans les temps, sans mauvaise surprise. Une bonne expérience, je reviendrai pour le prochain contrôle.",
+    vehicle: "Toyota Yaris",
+    verified: true
+  },
+  {
+    id: "3",
+    name: "Lap L",
+    rating: 5,
+    date: "Il y a 3 mois",
+    comment: "Un centre avec un personnel très professionnel, la dame à l'accueil a été exceptionnelle, c'est très rare de nos jours. Tout est parfaitement clair et bien expliqué au niveau du bilan final.",
+    vehicle: "Ford Fiesta",
+    verified: true
+  },
+]
+
+export const statsIvry: StatsAvis = {
+  totalAvis: 620,
+  noteMoyenne: 4.6,
+  repartition: {
+    5: 620,
+    4: 85,
+    3: 30,
+    2: 15,
+    1: 15
+  },
+  googleUrl: "https://www.google.com/search?q=tuv+dcta+ivry+sur+seine"
+}
+
+// Export par défaut pour compatibilité
+export const avisClients = avisLBM
+export const statsAvis = statsLBM

@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CTAM - Centre de Contrôle Technique Automobile
 
-## Getting Started
+Site vitrine pour les centres de contrôle technique CTAM situés à **Le Blanc-Mesnil** et **Ivry-sur-Seine**.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework** : Next.js 16 (App Router)
+- **React** : 19.2
+- **Styling** : Tailwind CSS 4
+- **UI Components** : shadcn/ui (style new-york)
+- **Icons** : Lucide React
+- **Package Manager** : pnpm
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Développement
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure du Projet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+ctam/
+├── app/                    # App Router (Next.js)
+│   ├── layout.tsx          # Layout principal
+│   ├── page.tsx            # Page d'accueil
+│   └── globals.css         # Styles globaux + variables CSS
+├── components/
+│   ├── ui/                 # Composants shadcn/ui
+│   ├── hero/               # Section Hero
+│   ├── section/
+│   │   ├── services/       # Section Services
+│   │   ├── tarifs/         # Section Tarifs (avec tabs par centre)
+│   │   └── avis/           # Section Avis Google (avec tabs par centre)
+│   └── navigation/         # Header, Footer, Logo
+├── lib/
+│   ├── tarifs-data.ts      # Données tarifs (LBM + Ivry)
+│   ├── avis-data.ts        # Données avis Google (LBM + Ivry)
+│   ├── services-data.ts    # Données services
+│   └── utils.ts            # Utilitaires (cn)
+└── public/                 # Assets statiques
+```
 
-## Deploy on Vercel
+## Centres
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Le Blanc-Mesnil (LBM)
+- Adresse : 17 rue Corneille, 93150 Le Blanc-Mesnil
+- Téléphone : 01 48 67 66 66
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Ivry-sur-Seine
+- Adresse : 3-5 bd Hippolyte Marquès, 94200 Ivry-sur-Seine
+- Téléphone : 01 46 71 11 22
+
+## Fonctionnalités
+
+- **Tabs par centre** : Les sections Tarifs et Avis affichent des données différentes selon le centre sélectionné
+- **Responsive** : Design adapté mobile, tablette et desktop
+- **Animations** : Transitions fluides et effets hover
+- **SEO** : Balises sémantiques et accessibilité
+
+## Ajout de composants shadcn
+
+```bash
+pnpm dlx shadcn@latest add [component-name]
+```

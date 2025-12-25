@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Plus, Menu, Calendar, Clock, Phone, MapPin } from "lucide-react"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { useState } from "react"
-import { schedules, centerInfo } from "@/lib/tarifs-data"
+import { schedules, lbmInfo, ivryInfo } from "@/lib/tarifs-data"
 
 export const Navbar = () => {
     return (
@@ -150,28 +150,24 @@ export const MobileNav = () => {
                                 </div>
                             </div>
 
-                            {/* Téléphone */}
-                            <a
-                                href={`tel:${centerInfo.phone.replace(/\s/g, '')}`}
-                                className="flex items-center gap-3 p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
-                            >
-                                <div className="p-2 bg-green-100 rounded-lg shrink-0">
-                                    <Phone className="h-4 w-4 text-green-600" aria-hidden="true" />
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="text-sm font-semibold text-gray-900">{centerInfo.phone}</span>
-                                    <span className="text-xs text-gray-600">Appelez-nous</span>
-                                </div>
-                            </a>
-
                             {/* Adresse */}
-                            <div className="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
-                                <div className="p-2 bg-red-100 rounded-lg shrink-0">
-                                    <MapPin className="h-4 w-4 text-red-600" aria-hidden="true" />
+                            <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                                <div className="p-2 bg-blue-100 rounded-lg shrink-0">
+                                    <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" />
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-sm font-semibold text-gray-900">Le Blanc-Mesnil</span>
-                                    <span className="text-xs text-gray-600">{centerInfo.address}</span>
+                                    <span className="text-xs text-gray-600">{lbmInfo.address}</span>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                                <div className="p-2 bg-blue-100 rounded-lg shrink-0">
+                                    <MapPin className="h-4 w-4 text-blue-600" aria-hidden="true" />
+                                </div>
+                                <div className="flex flex-col">
+                                    <span className="text-sm font-semibold text-gray-900">Ivry-Sur-Seine</span>
+                                    <span className="text-xs text-gray-600">{ivryInfo.address}</span>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import { Car, Bike, Truck, ClipboardCheck, Wrench, Shield } from "lucide-react"
+import { Car, Bike, Truck, ClipboardCheck, Shield, Sprout } from "lucide-react"
 
 export interface Service {
   id: string
@@ -52,29 +52,16 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "contre-visite",
-    title: "Contre-Visite",
-    description: "Vérification des réparations suite à un contrôle technique avec défaillances majeures.",
-    icon: ClipboardCheck,
+    id: "pollution",
+    title: "Contrôle Anti-Pollution",
+    description: "Mesure précise des émissions polluantes de votre véhicule pour le respect de l'environnement et des normes en vigueur.",
+    icon: Sprout,
     color: "green",
     features: [
-      "Délai de 2 mois",
-      "Tarif préférentiel",
-      "Sans rendez-vous",
-      "Vérification ciblée"
-    ]
-  },
-  {
-    id: "retouche",
-    title: "Retouche Avant CT",
-    description: "Service de petites retouches et ajustements pour optimiser votre passage au contrôle technique.",
-    icon: Wrench,
-    color: "blue",
-    features: [
-      "Réglages lumineux",
-      "Vérification niveaux",
-      "Essuie-glaces",
-      "Pneumatiques"
+      "Mesure de l'opacité des fumées",
+      "Analyse des émissions CO/HC",
+      "Conformité normes Euro",
+      "Rapport détaillé immédiat"
     ]
   },
   {
@@ -82,12 +69,25 @@ export const services: Service[] = [
     title: "Garantie Qualité",
     description: "Notre engagement : un service professionnel, rapide et transparent pour votre sécurité.",
     icon: Shield,
-    color: "red",
+    color: "purple",
     features: [
       "Équipement moderne",
       "Contrôleurs agréés",
       "Procédures certifiées",
       "Satisfaction garantie"
+    ]
+  },
+  {
+    id: "contre-visite",
+    title: "Contre-Visite",
+    description: "Vérification des réparations suite à un contrôle technique avec défaillances majeures.",
+    icon: ClipboardCheck,
+    color: "blue",
+    features: [
+      "Délai de 2 mois",
+      "Tarif préférentiel",
+      "Sans rendez-vous",
+      "Vérification ciblée"
     ]
   }
 ]

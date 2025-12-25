@@ -1,6 +1,6 @@
 import { Clock, Phone, MapPin, LucideIcon } from 'lucide-react'
 import React from 'react'
-import { schedules, centerInfo } from '@/lib/tarifs-data'
+import { schedules, lbmInfo } from '@/lib/tarifs-data'
 
 interface HeroCardProps {
     icon: LucideIcon
@@ -49,12 +49,6 @@ export const HeroCards = () => {
                 icon={Clock}
                 title={schedules[0].days}
                 subtitle={schedules[0].hours}
-                color="blue"
-            />
-            <HeroCard
-                icon={Phone}
-                title={centerInfo.phone}
-                subtitle='Appelez-nous dès maintenant pour prendre rendez-vous !'
                 color="blue"
             />
             <HeroCard

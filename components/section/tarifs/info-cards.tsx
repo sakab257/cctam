@@ -1,8 +1,19 @@
 import { Clock, MapPin, Phone } from 'lucide-react'
-import { schedules, centerInfo } from '@/lib/tarifs-data'
+import { schedules } from '@/lib/tarifs-data'
 import Link from 'next/link'
 
-export const InfoCards = () => {
+interface CenterInfo {
+  address: string
+  phone: string
+  access: string
+  promoNote: string
+}
+
+interface InfoCardsProps {
+  centerInfo: CenterInfo
+}
+
+export const InfoCards = ({ centerInfo }: InfoCardsProps) => {
   return (
     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
       {/* Horaires */}

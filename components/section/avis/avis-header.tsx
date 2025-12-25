@@ -1,27 +1,36 @@
 import { Star, Users } from 'lucide-react'
-import { statsAvis } from '@/lib/avis-data'
+import { type StatsAvis } from '@/lib/avis-data'
 
-export const AvisHeader = () => {
-  const percentage = (count: number) => Math.round((count / statsAvis.totalAvis) * 100)
+interface AvisHeaderProps {
+  stats: StatsAvis
+  showTitle?: boolean
+}
+
+export const AvisHeader = ({ stats, showTitle = true }: AvisHeaderProps) => {
+  const percentage = (count: number) => Math.round((count / stats.totalAvis) * 100)
 
   return (
     <div className="text-center max-w-4xl mx-auto mb-12">
-      <div className="inline-block mb-4">
-        <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
-          Témoignages Clients
-        </span>
-      </div>
+      {showTitle && (
+        <>
+          <div className="inline-block mb-4">
+            <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
+              Témoignages Clients
+            </span>
+          </div>
 
-      <h2
-        id="avis-title"
-        className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
-      >
-        Ce Que Nos <span className="text-primary">Clients Disent</span>
-      </h2>
+          <h2
+            id="avis-title"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+          >
+            Ce Que Nos <span className="text-primary">Clients Disent</span>
+          </h2>
 
-      <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-        La satisfaction de nos clients est notre priorité. Découvrez leurs expériences.
-      </p>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+            La satisfaction de nos clients est notre priorité. Découvrez leurs expériences.
+          </p>
+        </>
+      )}
 
       {/* Stats Section */}
       <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
@@ -29,7 +38,7 @@ export const AvisHeader = () => {
           {/* Note moyenne */}
           <div className="flex flex-col items-center">
             <div className="flex items-baseline gap-2 mb-2">
-              <span className="text-5xl font-bold text-primary">{statsAvis.noteMoyenne}</span>
+              <span className="text-5xl font-bold text-primary">{stats.noteMoyenne}</span>
               <span className="text-2xl text-gray-400">/5</span>
             </div>
             <div className="flex gap-1 mb-2">
@@ -37,7 +46,7 @@ export const AvisHeader = () => {
                 <Star
                   key={i}
                   className={`h-6 w-6 ${
-                    i < Math.round(statsAvis.noteMoyenne)
+                    i < Math.round(stats.noteMoyenne)
                       ? "fill-yellow-400 text-yellow-400"
                       : "fill-gray-200 text-gray-200"
                   }`}
@@ -46,7 +55,7 @@ export const AvisHeader = () => {
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Users className="h-5 w-5" />
-              <span className="text-sm font-medium">{statsAvis.totalAvis} avis clients</span>
+              <span className="text-sm font-medium">{stats.totalAvis} avis clients</span>
             </div>
           </div>
 
@@ -61,7 +70,7 @@ export const AvisHeader = () => {
                 <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-linear-to-r from-primary to-blue-600 rounded-full transition-all"
-                    style={{ width: `${percentage(statsAvis.repartition[stars as keyof typeof statsAvis.repartition])}%` }}
+                    style={{ width: `${percentage(stats.repartition[stars as keyof typeof stats.repartition])}%` }}
                   />
                 </div>
               </div>

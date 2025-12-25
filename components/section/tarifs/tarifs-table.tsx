@@ -1,7 +1,11 @@
-import { tarifs } from '@/lib/tarifs-data'
+import { type Tarif } from '@/lib/tarifs-data'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 
-export const TarifsTable = () => {
+interface TarifsTableProps {
+  tarifs: Tarif[]
+}
+
+export const TarifsTable = ({ tarifs }: TarifsTableProps) => {
   return (
     <div className="max-w-5xl mx-auto mb-12">
       <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200">
@@ -14,7 +18,6 @@ export const TarifsTable = () => {
             <TableRow>
               <TableHead className="font-semibold text-gray-900">Type de Contrôle</TableHead>
               <TableHead className="text-right font-semibold text-gray-900">Prix TTC</TableHead>
-              {/* <TableHead className="font-semibold text-gray-900">Description</TableHead> */}
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -46,7 +49,6 @@ export const TarifsTable = () => {
                       )}
                     </div>
                   </TableCell>
-                  {/* <TableCell className="text-gray-600 text-sm">{tarif.description}</TableCell> */}
                 </TableRow>
               )
             })}

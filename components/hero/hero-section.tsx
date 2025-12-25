@@ -30,7 +30,7 @@ const HeroSection = () => {
             {/* Description pour le SEO */}
             <p className="max-w-lg w-full text-base md:text-lg text-gray-600 text-shadow-2xs p-4">
                 Prenez rendez-vous en ligne 24h/24 pour votre contrôle technique automobile, moto ou voiture sans permis
-                dans nos centres CTAM du Blanc-Mesnil et d'Ivry-Sur-Seine.
+                dans nos centres CTAM <span className='font-bold'>AUTOSUR LE BLANC-MESNIL (93)</span> et <span className='font-bold'>AUTOSUR IVRY (94)</span>.
             </p>
 
             {/* Boutons CTA */}
@@ -44,12 +44,12 @@ const HeroSection = () => {
         </div>
 
         {/* Image ours en fond à gauche */}
-        <div className="hidden lg:block absolute lg:opacity-100 left-0 bottom-0 w-100 z-0 transition-all" aria-hidden="true">
+        <div className="hidden lg:block absolute lg:opacity-100 left-0 bottom-0 w-130 z-0 transition-all" aria-hidden="true">
             <Image
-                src="/ours3.webp"
+                src="/ours.webp"
                 alt="Image de la mascotte d'Autosur"
-                width={400}
-                height={400}
+                width={700}
+                height={700}
                 className="object-contain w-full h-auto transition-all"
                 priority
             />
