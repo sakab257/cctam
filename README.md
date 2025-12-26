@@ -72,6 +72,33 @@ ctam/
 - **Responsive** : Design adapté mobile, tablette et desktop
 - **Animations** : Transitions fluides et effets hover
 - **SEO** : Balises sémantiques et accessibilité
+- **Réservation en ligne** : Système Autoplanning (LBM) et iFrame (Ivry)
+
+## Système de Réservation
+
+### Le Blanc-Mesnil - Autoplanning
+Widget JavaScript natif Autoplanning (ID: 4523) intégré directement dans la page.
+- **Desktop** : Agenda affiché en ligne
+- **Mobile** : Bouton CTA qui ouvre l'agenda en modal
+
+### Ivry-sur-Seine - iFrame
+Système de réservation externe intégré via iFrame.
+
+## État d'Avancement
+
+### ✅ Fait
+- Pages principales (Accueil, Tarifs, Services, Avis, Contact, FAQ, CGV, Politique de confidentialité)
+- Design responsive mobile/desktop
+- SEO de base (métadonnées, sitemap, robots.txt, Open Graph)
+- Système de réservation pour les deux centres
+- Tabs pour switcher entre les centres
+
+### 📋 À faire (post-déploiement)
+- Google Analytics 4 - Tracking du trafic
+- Google Tag Manager - Gestion des tags
+- Tracking de conversion AdWords - Mesurer les réservations
+- Schema.org JSON-LD - Rich snippets Google
+- Optimisation des images Open Graph
 
 ## Ajout de composants shadcn
 

@@ -100,3 +100,41 @@ pnpm build
 # Ajouter un composant shadcn
 pnpm dlx shadcn@latest add [component-name]
 ```
+
+## Système de Réservation
+
+### Le Blanc-Mesnil - Autoplanning (Widget natif)
+- **Composant** : `components/reservation/autoplanning-widget.tsx`
+- **ID Institution** : 4523
+- **Fonctionnement** : Widget JavaScript Autoplanning intégré directement
+- **Mobile** : Bouton CTA qui ouvre l'agenda en modal
+- **Desktop** : Agenda affiché directement dans la page
+
+### Ivry-sur-Seine - iFrame
+- **Page** : `app/ivry-sur-seine/page.tsx`
+- **Fonctionnement** : iFrame vers le système de réservation externe
+
+### Problème Autoplanning résolu
+Le widget Autoplanning avait des erreurs CORS car leur script `load-agenda-script.js` redirigeait vers HTTP au lieu de HTTPS. Solution :
+1. Charger directement `main.js` en HTTPS (`https://www.apfr.fr/uploads/customer/agenda-element/v4/main.js`)
+2. Configurer manuellement `window.AgendaElement` avec les paramètres de l'institution (customerID, institutionID, login, rdvTypesGroups, etc.)
+3. Ajouter un stub pour `gtag` (Google Analytics) car le script l'attend
+
+## État d'Avancement
+
+### Fait
+- [x] Pages principales (Accueil, Tarifs, Services, Avis, Contact, etc.)
+- [x] Design responsive mobile/desktop
+- [x] SEO de base (métadonnées, sitemap, robots.txt, Open Graph)
+- [x] Système de réservation Le Blanc-Mesnil (Autoplanning)
+- [x] Système de réservation Ivry-sur-Seine (iFrame)
+- [x] Tabs pour switcher entre les centres (Tarifs, Avis)
+
+### À faire (post-déploiement)
+- [ ] **Google Analytics 4** - Tracking du trafic
+- [ ] **Google Tag Manager** - Gestion des tags
+- [ ] **Tracking de conversion AdWords** - Mesurer les réservations
+- [ ] **Schema.org JSON-LD** - Rich snippets Google (LocalBusiness, AggregateRating)
+- [ ] **Images Open Graph** - Optimiser les partages sociaux (1200x630px)
+- [ ] **Optimiser ours.webp** - Réduire de 316K à <100K
+- [ ] **Headers de sécurité** - Configurer dans next.config.ts
