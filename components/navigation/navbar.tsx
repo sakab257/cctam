@@ -93,7 +93,7 @@ export const MobileNav = () => {
                 <div className="flex flex-col gap-6 pb-6">
                     <nav aria-label="Navigation principale mobile">
                         <ul className="flex flex-col gap-2">
-                            <Link href="#hero-section" className="w-full px-4">
+                            <Link href="/#hero-section" className="w-full px-4">
                                 <Button className="font-bold text-lg py-6 w-full">
                                     <Calendar className="h-5 w-5" aria-hidden="true" />
                                     Prendre RDV

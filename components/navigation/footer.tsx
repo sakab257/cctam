@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "../ui/button"
-import { Phone, Calendar, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react"
+import { Phone, Calendar, MapPin, Clock, Facebook, Instagram } from "lucide-react"
 import Link from "next/link"
 import {
     Dialog,
@@ -79,7 +79,7 @@ export const FooterMobile = () => {
                         className="flex-1 font-semibold shadow-md"
                     >
                         <Link
-                            href="#hero-section"
+                            href="/#hero-section"
                             aria-label="Prendre rendez-vous en ligne pour un contrôle technique"
                         >
                             <Calendar className="h-5 w-5 mr-2" aria-hidden="true" />
@@ -115,14 +115,16 @@ export const Footer = () => {
                 className="p-2 bg-gray-800 rounded-lg hover:bg-primary transition-colors"
                 aria-label="Instagram"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link
                 href="https://www.facebook.com/cctamleblancmesnil"
                 className="p-2 bg-gray-800 rounded-lg hover:bg-primary transition-colors"
-                aria-label="Instagram"
+                aria-label="Facebook"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Facebook className="h-5 w-5" />
               </Link>

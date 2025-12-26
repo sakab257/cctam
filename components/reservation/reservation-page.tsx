@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/navigation/header"
 import { Footer, FooterMobile } from "@/components/navigation/footer"
-import { MapPin, Clock, Phone, ArrowLeft, Calendar, CheckCircle2, Shield } from "lucide-react"
+import { MapPin, Clock, Phone, ArrowLeft, Calendar, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 

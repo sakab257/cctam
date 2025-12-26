@@ -1,5 +1,4 @@
-import { Clock, Phone, MapPin, LucideIcon } from 'lucide-react'
-import React from 'react'
+import { Clock, MapPin, LucideIcon } from 'lucide-react'
 import { schedules, lbmInfo, ivryInfo } from '@/lib/tarifs-data'
 
 interface HeroCardProps {
@@ -19,7 +18,7 @@ const colorVariants = {
     }
 }
 
-const HeroCard = ({ icon: Icon, icon2:Icon2, hour, subhour,title, subtitle, color }: HeroCardProps) => {
+const HeroCard = ({ icon: Icon, icon2: Icon2, hour, subhour, title, subtitle, color }: HeroCardProps) => {
     const colors = colorVariants[color]
 
     return (
@@ -70,5 +69,3 @@ export const HeroCards = () => {
         </>
     )
 }
-
-export default HeroCard

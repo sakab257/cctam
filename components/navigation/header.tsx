@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "../ui/button"
 import { NavLogo } from "./logo"
 import { Navbar, Other, MobileNav } from "./navbar"
@@ -9,7 +10,9 @@ export const Header = () => {
                 <NavLogo />
                 <div className="hidden lg:flex gap-2 items-center">
                     <Navbar />
-                    <Button className="font-bold hover:scale-105 transition-all">Prendre Rendez-Vous</Button>
+                    <Link href={`/#hero-section`}>
+                        <Button className="font-bold hover:scale-105 transition-all">Prendre Rendez-Vous</Button>
+                    </Link>
                     <Other />
                 </div>
                 <MobileNav />

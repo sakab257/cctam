@@ -19,27 +19,27 @@ export const links = [
 export const otherLinks = [
     {
         title: "Qui sommes-nous ?",
-        href: "",
+        href: "/qui-sommes-nous",
         description: "Découvrez le centre de contrôle technique CTAM Le Blanc-Mesnil"
     },
     {
-        title: "éviter la contre visite",
-        href: "",
+        title: "Éviter la contre-visite",
+        href: "/eviter-contre-visite",
         description: "Conseils pour réussir votre contrôle technique du premier coup"
     },
     {
-        title: "accès",
-        href: "",
+        title: "Accès & Plan",
+        href: "/acces-plan",
         description: "Voyez comment accéder à nos centres."
     },
     {
         title: "Actualités",
-        href: "",
+        href: "/actualites",
         description: "Suivez l'actualité du contrôle technique et de CTAM"
     },
     {
         title: "Recrutement",
-        href: "",
-        description: "Suivez l'actualité du contrôle technique et de CTAM"
+        href: "/recrutement",
+        description: "Rejoignez notre équipe de contrôleurs techniques"
     },
 ]
