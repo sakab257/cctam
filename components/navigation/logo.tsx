@@ -10,20 +10,20 @@ export const NavLogo = () => {
       title="CTAM - Contrôle Technique Auto Moto Le Blanc-Mesnil / Ivry-Sur-Seine"
     >
         <Image
-          src={'/autosur_logo.webp'}
-          alt="Logo Autosur"
-          width={100}
-          height={100}
-          priority
-          title="Autosur"
-        />
-        <Image
           src={'/logo.webp'}
           alt="Logo du centre CTAM Le Blanc-Mesnil / Ivry-Sur-Seine"
           width={60}
           height={60}
           priority
           title="CTAM Le Blanc-Mesnil / Ivry-Sur-Seine"
+        />
+        <Image
+          src={'/autosur_logo.webp'}
+          alt="Logo Autosur"
+          width={100}
+          height={100}
+          priority
+          title="Autosur"
         />
         <span className="font-bold text-xl md:text-3xl">CTAM</span>
     </Link>

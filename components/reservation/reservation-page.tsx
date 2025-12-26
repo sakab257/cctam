@@ -20,9 +20,10 @@ interface CenterInfo {
 interface ReservationPageProps {
   center: CenterInfo
   iframeSrc?: string
+  children?: React.ReactNode
 }
 
-export const ReservationPage = ({ center, iframeSrc }: ReservationPageProps) => {
+export const ReservationPage = ({ center, iframeSrc, children }: ReservationPageProps) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -62,10 +63,13 @@ export const ReservationPage = ({ center, iframeSrc }: ReservationPageProps) => 
             {/* Main content grid */}
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
 
-              {/* Iframe / Placeholder - Takes 2 columns on desktop */}
+              {/* Widget / Iframe / Placeholder - Takes 2 columns on desktop */}
               <div className="lg:col-span-2 order-2 lg:order-1">
                 <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                  {iframeSrc ? (
+                  {children ? (
+                    // Widget Autoplanning passé en children
+                    children
+                  ) : iframeSrc ? (
                     <iframe
                       src={iframeSrc}
                       className="w-full h-150 md:h-175 lg:h-187.5 border-0"

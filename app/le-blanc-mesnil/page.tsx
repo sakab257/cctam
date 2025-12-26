@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { ReservationPage } from "@/components/reservation/reservation-page"
+import { AutoPlanningWidget } from "@/components/reservation/autoplanning-widget"
 import { lbmInfo } from "@/lib/tarifs-data"
 
 export const metadata: Metadata = {
@@ -16,11 +17,12 @@ export default function LeBlancMesnilPage() {
     access: lbmInfo.access,
   }
 
+  // ID Autoplanning récupéré lors de l'analyse précédente pour Le Blanc-Mesnil
+  const AUTOPLANNING_ID = "4523" 
+
   return (
-    <ReservationPage
-      center={centerInfo}
-      // TODO: Ajouter l'URL de l'iframe Autosur pour Le Blanc-Mesnil
-      // iframeSrc="https://..."
-    />
+    <ReservationPage center={centerInfo}>
+      <AutoPlanningWidget centerId={AUTOPLANNING_ID} />
+    </ReservationPage>
   )
 }

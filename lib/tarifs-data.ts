@@ -323,7 +323,7 @@ export const lbmInfo = {
 export const ivryInfo = {
   address: "3-5 bd Hippolyte Marquès, 94200 Ivry-sur-Seine",
   phone: "01 46 71 11 22",
-  access: "À quelques pas du péripherique.",
+  access: "À la Porte d'Ivry.",
   promoNote: "Remise de 5 € pour véhicule particulier - Valable uniquement sur créneaux spécifiques internet",
   schedule: {
     days: "Lundi au Samedi",
